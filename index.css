@@ -1,46 +1,236 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background: #f4f4f4;
-    padding: 0;
+    font-family: 'Open Sans' sans-serif;
     margin: 0;
-    color: #333;
-}
-
-.container {
-    width: 80%; 
-    max-width: 1200px;
-    overflow: hidden;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333
 }
 
 h1, h2 {
-    font-family: 'Roboto',  sans-serif;
+    font-family: 'Roboto' sans-serif;
+    color: white;
 }
 
-a {
-    font-family: 'Roboto',  sans-serif;
-    font-weight: bold;
-}
-
-header {
+.header {
     background: linear-gradient(to right, #2b5876, #4e4376);
-    color: #fff;
+    color: #f4f4f4;
+    padding: 20px 0;
     position: fixed;
-    top: 0;
     width: 100%;
-    padding-bottom: 10px;
+    top: 0;
+    z-index: 9999;
 }
 
-.container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
 
-a {
-    color: white;
+.nav {
+    position: relative;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #fff;
     text-decoration: none;
-    padding: 10px;
+    font-weight: 600;
 }
 
+.nav-link:hover {
+    color: #ffd700
+}
+
+.section {
+    padding: 20px 0;
+    margin-top: 30px; 
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.section-about {
+    padding: 20px 0;
+    margin-top: 120px; 
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    color: black;
+    font-size: 50px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.about-description {
+    font-size: 20px;
+    text-align: center;
+}
+
+.education {
+    background: #f4f4f4;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(201, 42, 42, 0.874);  
+}
+
+.work {
+    background: #f4f4f4;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+.work-item {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(201, 42, 42, 0.874);  
+}
+
+.skills .skill-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.skill:hover {
+    background: #555;
+    transform: scale(1.2);
+}
+
+.projects .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.project {
+    background: #e4e4e4;
+    margin: 10px;
+    padding: 10px; 
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.project:hover {
+    transform: translateY(10px);
+    box-shadow: 0 2px 10px rgba(220, 55, 55, 0.832);
+}
+
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project-title {
+    margin-top: 0;
+}
+
+.testimonials {
+    background: #f4f4f4;
+    padding: 4rem 0;
+}
+
+.testimonial-item {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(222, 28, 28, 0.692);
+}
+
+.testimonial-quote {
+    margin: 0;
+    font-size: 11px;
+
+}
+
+.testimonial-author {
+    margin-top: 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; 
+    max-width: 700px;
+}
+
+.contact-label {
+    margin-top: 1rem;
+}
+
+.contact-input, .contact-textarea {
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;   
+}
+
+.contact-button {
+    padding: 20px;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    color: #fff;
+    border-radius: 10px; 
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.contact-button:hover {
+    background: linear-gradient(to right, #4e4376, #2b5876);
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.footer-text {
+    margin: 0;
+}

@@ -20,7 +20,7 @@ h1, h2 {
 }
 
 /* Header Styles */
-header {
+.header {
     background: linear-gradient(to right, #2b5876, #4e4376);
     color: #fff;
     padding: 1rem 0;
@@ -31,47 +31,70 @@ header {
     z-index: 1000;
 }
 
-header .container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header h1 {
+.header-title {
     font-size: 2rem;
 }
 
-header nav ul {
+.nav {
+    position: relative;
+}
+
+.nav-list {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-header nav ul li {
+.nav-item {
     margin-left: 1.5rem;
 }
 
-header nav ul li a {
+.nav-link {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
 }
 
-header nav ul li a:hover {
+.nav-link:hover {
     color: #ffd700;
 }
 
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #ffd700;
+    transition: width 0.4s ease;
+    transition-delay: 0.2s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    background: #ffd700;
+}
+
 /* Section Styles */
-section {
+.section {
     padding: 6rem 0;
     margin-top: 5rem;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-section h2 {
+.section-title {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #333;
@@ -79,7 +102,7 @@ section h2 {
     text-align: center;
 }
 
-.about p {
+.about-description {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
@@ -99,7 +122,7 @@ section h2 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.education-item h3, .experience-item h3 {
+.education-title, .experience-title {
     margin-top: 0;
 }
 
@@ -151,46 +174,44 @@ section h2 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.project img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
-}
 
-.project:hover img {
+.project:hover .project-image {
     transform: scale(1.1);
 }
 
-.project h3 {
+.project-title {
     margin-top: 0;
 }
 
-.testimonial-item p {
+.testimonial-quote {
     margin: 0;
     font-size: 1.1rem;
     line-height: 1.5;
 }
 
-.contact form {
+.testimonial-author {
+    margin-top: 0.5rem;
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
 }
 
-.contact form label {
+.contact-label {
     margin-top: 1rem;
 }
 
-.contact form input, .contact form textarea {
+.contact-input, .contact-textarea {
     padding: 0.7rem;
     margin-top: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.contact form button {
+.contact-button {
     padding: 0.7rem;
     background: linear-gradient(to right, #2b5876, #4e4376);
     color: #fff;
@@ -202,11 +223,11 @@ section h2 {
     transition: background 0.3s;
 }
 
-.contact form button:hover {
+.contact-button:hover {
     background: linear-gradient(to right, #4e4376, #2b5876);
 }
 
-footer {
+.footer {
     background: #333;
     color: #fff;
     text-align: center;
@@ -215,16 +236,20 @@ footer {
     box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
 }
 
+.footer-text {
+    margin: 0;
+}
+
 @media (max-width: 768px) {
-    header .container {
+    .header-container {
         flex-direction: column;
     }
 
-    header nav ul {
+    .nav-list {
         flex-direction: column;
     }
 
-    header nav ul li {
+    .nav-item {
         margin: 0.5rem 0;
     }
 
@@ -236,63 +261,43 @@ footer {
         flex-direction: column;
     }
 
-    section {
+    .section {
         padding: 3rem 0;
     }
 
-    .contact form {
+    .contact-form {
         padding: 0 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    header h1 {
+    .header-title {
         font-size: 1.5rem;
     }
 
-    header nav ul li a {
+    .nav-link {
         font-size: 0.9rem;
     }
 
-    .about p {
+    .about-description {
         font-size: 1rem;
     }
 
-    .skills .skill {
+    .skill {
         font-size: 0.9rem;
         padding: 0.7rem;
     }
 
-    .contact form input, .contact form textarea {
+    .contact-input, .contact-textarea {
         font-size: 0.9rem;
     }
 
-    .contact form button {
+    .contact-button {
         font-size: 0.9rem;
         padding: 0.5rem;
     }
 
-    section h2 {
+    .section-title {
         font-size: 2rem;
     }
-}
-
-/* Animations and Transitions */
-header nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    display: block;
-    margin-top: 5px;
-    right: 0;
-    background: #ffd700;
-    transition: width 0.4s ease;
-    transition-delay: 0.2s;
-}
-
-header nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
-    background: #ffd700;
 }
